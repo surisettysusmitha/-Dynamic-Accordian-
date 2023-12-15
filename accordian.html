@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic accordian</title>
+  <style>
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+
+    .panel {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-top: 5px;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    .panel-header {
+      cursor: pointer;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<div class="accordion">
+  <div class="panel-header" onclick="togglePanel('panel1')">Section 1</div>
+  <div class="panel" id="panel1">
+    <p>Animation has allowed storytellers to tell stories in unique ways. 
+        The visceral fantastical worlds in animated films can reignite inspiration 
+        and the magic of stories no matter what age. So if you’re a storyteller, or
+         want to be, the animation is a great place to start.</p>
+  </div>
+
+  <div class="panel-header" onclick="togglePanel('panel2')">Section 2</div>
+  <div class="panel" id="panel2">
+    <p>The simulation of movement created by a series of pictures is animation. 
+        But how it actually works is a bit more complicated than that.
+        Before we get to the various types of animated motion pictures, 
+        let's start with an animation definition</p>
+  </div>
+
+  <div class="panel-header" onclick="togglePanel('panel3')">Section 3</div>
+  <div class="panel" id="panel3">
+    <p> how it actually works is a bit more complicated than that.
+        Before we get to the various types of animated motion pictures, 
+        let's start with an animation definitio</p>
+  </div>
+</div>
+
+<script>
+  function togglePanel(panelId) {
+    const panel = document.getElementById(panelId);
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
